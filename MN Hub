@@ -42,7 +42,162 @@ TextLabel.TextWrapped = true
 Frame.Name = "Frame"
 Frame.Parent = Main
 Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Frame.BackgroundTransparency = 1.000local Hub = Instance.new("ScreenGui")
+Frame.BackgroundTransparency = 1.000local Hub = Instance.new("ScreenGui")local Hub = Instance.new("ScreenGui")
+local Main = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local Frame = Instance.new("ImageLabel")
+local TextBox = Instance.new("TextBox")
+local Frame_2 = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+local Sound = Instance.new("Sound", workspace)
+local LoginSuccess = false
+
+Hub.Name = "Hub"
+Hub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Main.Name = "Main"
+Main.Parent = Hub
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.Position = UDim2.new(0.388, 0,-0.181, 0)
+Main.Size = UDim2.new(0, 404, 0, 132)
+Main.Image = "rbxassetid://3570695787"
+Main.ImageColor3 = Color3.fromRGB(0, 46, 255)
+Main.ScaleType = Enum.ScaleType.Slice
+Main.SliceCenter = Rect.new(100, 100, 100, 100)
+Main.SliceScale = 0.120
+Main.Active = true
+Main.Draggable = true
+wait(0.6)
+Main:TweenPosition(UDim2.new(0.395, 0,0.412, 0))
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Size = UDim2.new(0, 404, 0, 41)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.Text = "Midnight Hub"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel.TextWrapped = true
+
+Frame.Name = "Frame"
+Frame.Parent = Main
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.0420792066, 0, 0.333333343, 0)
+Frame.Size = UDim2.new(0, 370, 0, 37)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.120
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 1.000
+TextBox.Size = UDim2.new(0, 370, 0, 37)
+TextBox.Font = Enum.Font.GothamBlack
+TextBox.PlaceholderColor3 = Color3.fromRGB(0, 46, 255)
+TextBox.PlaceholderText = "Place Key Here!"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 46, 255)
+TextBox.TextScaled = true
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+
+Frame_2.Name = "Frame"
+Frame_2.Parent = Main
+Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.Position = UDim2.new(0.297029704, 0, 0.659090936, 0)
+Frame_2.Size = UDim2.new(0, 164, 0, 37)
+Frame_2.Image = "rbxassetid://3570695787"
+Frame_2.ScaleType = Enum.ScaleType.Slice
+Frame_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame_2.SliceScale = 0.120
+
+TextButton.Parent = Frame_2
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0792682916, 0, 0, 0)
+TextButton.Size = UDim2.new(0, 139, 0, 37)
+TextButton.Font = Enum.Font.GothamBlack
+TextButton.Text = "Login"
+TextButton.TextColor3 = Color3.fromRGB(0, 46, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Click:Connect(function()
+	if TextBox.Text == "1E0CWA1C5" then
+		LoginSuccess = true
+		Hub:Destroy()
+	else
+		local msg = Instance.new("Message", game.Players.LocalPlayer.PlayerGui)
+		msg.Text = "Incorrect Key!!! | คีย์ไม่ถูกต้อง!!!"
+		wait(1.5)
+		msg:Destroy()
+	end
+end)
+
+repeat wait() until LoginSuccess == true
+local msg2 = Instance.new("Message", game.Players.LocalPlayer.PlayerGui)
+msg2.Text = "Hub Loaded!! | ฮับโหลดเสร็จสิ้น!!"
+wait(1.5)
+msg2:Destroy()
+if game.PlaceId == 537413528 then
+_G.ToggleColor = Color3.fromRGB(255, 191, 0)
+_G.ButtonColor = Color3.fromRGB(255, 191, 0)
+_G.SliderColor = Color3.fromRGB(255, 191, 0)
+
+local library = loadstring(game:HttpGet(('https://pastebin.com/raw/FsJak6AT')))() -- It's obfuscated, I won't let you see my ugly coding skills. =)
+
+local w = library:CreateWindow("BABFT")
+
+local b = w:CreateFolder("Auto Farm Money")
+
+b:Button("1 Farm Money",function()
+local pos = CFrame.new(-55.1029243, 145.619171, 552.804504)
+local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new((1.5), Enum.EasingStyle.Linear)
+local tweeen = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = pos})
+tweeen:Play()
+wait(1.6)
+local pos = CFrame.new(-53.0730896, 37.5081444, 9368.35547)
+local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new((22), Enum.EasingStyle.Linear)
+local tweeen = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = pos})
+tweeen:Play()
+wait(22)
+local pos = CFrame.new(-53.7775536, -354.364044, 9502.77734)
+local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new((1), Enum.EasingStyle.Linear)
+local tweeen = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = pos})
+tweeen:Play()
+end)
+
+local Auto = false
+b:Toggle("Auto Farm Money",function(bool)
+    Auto = bool
+end)
+
+while wait(23.7) do
+if Auto == true then
+local pos = CFrame.new(-55.1029243, 145.619171, 552.804504)
+local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new((1.5), Enum.EasingStyle.Linear)
+local tweeen = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = pos})
+tweeen:Play()
+wait(1.6)
+local pos = CFrame.new(-53.0730896, 37.5081444, 9368.35547)
+local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new((22), Enum.EasingStyle.Linear)
+local tweeen = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = pos})
+tweeen:Play()
+wait(22)
+local pos = CFrame.new(-53.7775536, -354.364044, 9502.77734)
+local tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new((1), Enum.EasingStyle.Linear)
+local tweeen = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = pos})
+tweeen:Play()
+end
+end
+end
 local Main = Instance.new("ImageLabel")
 local TextLabel = Instance.new("TextLabel")
 local Frame = Instance.new("ImageLabel")
